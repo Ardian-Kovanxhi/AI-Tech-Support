@@ -11,10 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Reply.belongsTo(models.User, { foreignKey: 'posterId' })
+      Reply.belongsTo(models.Post, { foreignKey: 'postId' })
     }
   }
   Reply.init({
-    userId: {
+    posterId: {
       type: DataTypes.INTEGER,
       allowNull: false
     },

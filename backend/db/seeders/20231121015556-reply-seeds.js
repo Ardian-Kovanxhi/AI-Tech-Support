@@ -10,7 +10,7 @@ module.exports = {
     options.tableName = 'Replies';
     return queryInterface.bulkInsert(options, [
       {
-        userId: 1,
+        posterId: 1,
         postId: 1,
         body: 'blah blah blah'
       }

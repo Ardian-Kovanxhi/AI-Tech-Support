@@ -50,6 +50,8 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       // define association here
+      User.hasMany(models.Post, { foreignKey: 'posterId' })
+      User.hasMany(models.Reply, { foreignKey: 'posterId' })
     }
   }
   User.init({

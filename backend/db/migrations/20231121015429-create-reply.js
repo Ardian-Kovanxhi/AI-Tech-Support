@@ -14,7 +14,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
+      posterId: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
